@@ -1,8 +1,6 @@
 """
 june 22 homework
-
 Create a graph paper based on input from user
-
 """
 
 import sys
@@ -18,48 +16,24 @@ def printGraph(rows, columns, rowWidth, columnWidth):
         c = columns
         while c > 0:
             print("+",end="")
-            cw = columnWidth
-            while cw > 0:
-                print("-",end="")
-                cw -= 1
+            print(columnWidth*"-",end="")
             c -= 1
-        print(end = "\n")
+        print()
             
         rw = rowWidth
         while rw > 0:
             c = columns
             while c > 0:
                 print("|",end="")
-                cw = columnWidth
-                while cw > 0:
-                    print(" ",end="")
-                    cw -= 1
+                print(columnWidth*" ",end="")
                 c -= 1
             rw -=1
-            print(end = "\n")
+            print()
         r -= 1
-    return;
-
 
 print("\nThis is what your graph paper looks like:")
 printGraph(rows, columns, rowWidth, columnWidth)
-print("\n")
+print()
 
 sys.exit(0)
 
-
-"""
-Testing how to print on new line
-print(rows)
-print(columns)
-print(rows,end="")
-print(end="\n")
-print(columns)
-"""
-        
-        
-        
-
-
-
-sys.exit(0)
